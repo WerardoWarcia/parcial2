@@ -12,6 +12,7 @@ class App extends PIXI.Application
     document.body.appendChild @view
     @build()
     @animate()
+    console.log _
 
   build:=>
     blockContainer = new BlockCollectionView (@)
