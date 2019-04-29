@@ -20,7 +20,9 @@
     "webpack-dev-server": "^2.11.1"
   },
   "dependencies": {
+    "flip": "^1.0.0",
     "gsap": "^2.1.2",
+    "jquery": "^3.4.0",
     "nanoevents": "^1.0.8",
     "pixi.js": "^4.7.0",
     "underscore": "^1.9.1"

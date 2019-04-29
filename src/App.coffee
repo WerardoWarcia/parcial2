@@ -7,20 +7,28 @@ BlockCollectionView = require('./modules/scenes/blocks/BlockCollectionView')
 class App extends PIXI.Application
   animation:true
   animationNodes:[]
+  col:10
+  row:10
   constructor:(w,h,o)->
+    height = window.innerHeight/10
+    width = window.innerWidth/10
     super(w,h,o)
     document.body.appendChild @view
     @build()
     @animate()
-    console.log _
+    #window.addEventListener 'mouseover', @OnMouseOver
 
   build:=>
     blockContainer = new BlockCollectionView (@)
     null
 
+    #OnMouseOver: (evt)=>
+  #  console.log 'hi'
+
   addAnimationNodes:(child)=>
     @animationNodes.push child
     null
+
 
   animate:=>
     @ticker.add ()=>
